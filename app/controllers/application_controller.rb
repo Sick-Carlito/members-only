@@ -12,5 +12,22 @@ class ApplicationController < ActionController::Base
   	@current_user = user
   end
 
+  helper_method: current_user
+
+  private
+
+	def signin_required
+		if !signed_in?
+			flash[:notice] = "Sign in to edit or delete your Post"
+			redirect_to root_path
+		end
+	end
+
+  def signed_in
+  	!! current_user
+  end
+
+  helper_method: signed_in
+
 
 end
