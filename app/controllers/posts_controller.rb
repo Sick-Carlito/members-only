@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 	before_action :signin_required, only: [:new, :create]
 
 	def index
-		@Post = Post.all
+		@posts = Post.all
 	end
 
 	def new
@@ -26,7 +26,7 @@ class PostsController < ApplicationController
 
     private
     
-    def signed_in_user
+    def signin_required
       unless signed_in?
         redirect_to signin_url
       end

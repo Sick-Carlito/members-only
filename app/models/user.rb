@@ -2,6 +2,9 @@ class User < ApplicationRecord
 	has_secure_password
 	has_many :posts
 
+	validates :email, presence: true
+	validates :password, length: { minimum: 6 }
+
 	before_create :create_remember_token
 
 
