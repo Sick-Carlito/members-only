@@ -24,8 +24,6 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :body)
   end
 
-  private
-
   def signin_required
     redirect_to signin_url unless signed_in?
   end
