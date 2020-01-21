@@ -23,7 +23,6 @@ class PostsController < ApplicationController
       params.require(:post).permit(:title, :body)  
     end
 
-
     private
     
     def signin_required
