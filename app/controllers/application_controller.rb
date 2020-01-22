@@ -16,10 +16,9 @@ class ApplicationController < ActionController::Base
   private
 
   def signin_required
-    unless signed_in?
-      flash[:notice] = 'Sign in to edit or delete your Post'
+    return unless signed_in?
+      flash[:notice] = 'Sign in to create a Post'
       redirect_to root_url
-    end
   end
 
   def signed_in?
