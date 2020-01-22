@@ -17,8 +17,9 @@ class ApplicationController < ActionController::Base
 
   def signin_required
     return unless signed_in?
-      flash[:notice] = 'Sign in to create a Post'
-      redirect_to root_url
+
+    flash[:notice] = 'Sign in to create a Post'
+    redirect_to root_url
   end
 
   def signed_in?
