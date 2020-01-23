@@ -23,18 +23,12 @@ rails s
 
 ```
 
-Go to the terminal and open the console using this command 
+#### To sign up
 ```
-rails c
-
-```
-
-Create a user from the console with sign in credentials
-```
-user = User.create(:name => "foobar", :email => "foo@bar.com", :password => "foobar", :password_confirmation => "foobar")
+Visit localhost:3000/signup
 ```
 
-then open your browser and try to sign in
+then proceed to sign in
 
 #### To sign in
 ```
