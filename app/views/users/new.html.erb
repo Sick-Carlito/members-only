@@ -1,0 +1,35 @@
+ <% provide(:title, 'Sign up') %>
+
+        <h3>Sign Up</h3>
+      
+        <p>Please create an account.</p>
+        <div style="margin-top: 5px">
+          <%= form_for(@user) do |f| %>
+          
+          
+            <div style="margin-top: 5px">
+              <%= f.text_field :name,  placeholder: 'Your Name' %>
+            </div>
+         
+
+       
+            <div style="margin-top: 5px">
+              <%= f.email_field :email, placeholder: 'Your Email' %>
+            </div>
+        
+
+          
+            <div style="margin-top: 5px">
+              <%= f.password_field :password, placeholder: 'Your Password' %>
+            </div>
+       
+
+          
+            <div style="margin-top: 5px">
+              <%= f.password_field :password_confirmation, placeholder: 'Password Confirmation' %>
+            </div>
+          
+          <%= f.submit "Create my account", class: "button is-block is-info is-large is-fullwidth" %>
+          <% end %>
+          </div>
+     
